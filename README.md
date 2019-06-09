@@ -1,4 +1,3 @@
 ## Frontend Bootstrapping
 German Cardenas
-
-Un cambio adicional
+Se borro cambio en Readme
