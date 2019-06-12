@@ -1,11 +1,24 @@
+:root{
+  --rgba-primary: 0,110,182;	/* Main Primary color */
+  --rgba-primary-ligth: 14,158,251;
+  --rgba-primary-dark:  0, 67,110;
+  
+  --rgba-secondary:  0, 10,193;	/* Main Secondary color*/
+  --rgba-secondary-ligth: 33, 44,252;
+  --rgba-secondary-dark:  0,  6,119;
+
+  --rgba-third: 0,194,100;	/* Main third color */
+  --rgba-third-ligth:  0,252,131;
+  --rgba-third-dark:  0,119, 62;
+}
+
 body{
-    background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%);
     padding: 0;
     margin: 0;
     border: none;
     font-family: 'Poppins';
     font-size: 14px;
-    color: #626262;
+    color: rgb(var(--fourColor));
     letter-spacing: 0em;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -13,14 +26,11 @@ body{
 
 a{
     text-decoration: none;
-    color: #171717;
+    color: rgb(23, 10, 28);
 }
 
-
-
 .background.gradient {
-    background: #50a3a2;
-    background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%);
+    background: linear-gradient(to bottom right, rgba(var(--rgba-primary-ligth), 0.7) 0%, rgba(var(--rgba-primary-ligth), 0.1) 100%);
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -136,7 +146,7 @@ input, textarea, button {
     font-size: 13px;
     width: 100%;
     height: 60px;
-    color: #171717;
+    color: #170A1C;
     background: none;
     border: none;
     border-bottom: 1px solid #d8dbe2;
@@ -148,8 +158,8 @@ input, textarea, button {
 }
 
 input:focus, textarea:focus, button:focus {
-    color: #171717;
-    border-bottom: 1px solid #2eca7f;
+    color: #170A1C;
+    border-bottom: 1px solid rgb(var(--rgba-primary));
 }
 
 .title{
@@ -158,7 +168,7 @@ input:focus, textarea:focus, button:focus {
     padding: 0 0 5px 0;
     position: relative;
     font-size: 17px;
-    color: #171717;
+    color: #170A1C;
     line-height: 21px;
     font-weight: 500;
 }
@@ -170,7 +180,7 @@ input:focus, textarea:focus, button:focus {
     top: 0;
     width: 30px;
     height: 30px;
-    background: linear-gradient(135deg, rgba(46, 202, 127, 0.4) 0%, rgba(46, 202, 127, 0.01) 100%);
+    background: linear-gradient(135deg, rgba(var(--rgba-primary-ligth), 0.9) 0%, rgba(var(--rgba-primary-ligth), 0.01) 100%);
     z-index: -1;
     border-radius: 30px;
 }
@@ -187,6 +197,7 @@ input:focus, textarea:focus, button:focus {
 
 .line-left{
     position: relative;
+
 }
 .line-left::before{
     content: '';
@@ -261,7 +272,7 @@ header nav a .link{
 }
 
 header nav a:hover {
-    color: #2eca7f;
+    color: rgb(var(--rgba-primary));
 }
 
 main{
@@ -290,7 +301,7 @@ main .profile{
 }
 
 .profile-background{
-    background-image: url("./img/bg.jpg");
+    background-image: url("./img/bgLandscape.jpg");
     height: 300px;
     background-size: cover;
     background-position: center center;
@@ -338,24 +349,24 @@ main .profile{
     content: '';
     position: absolute;
     top: -69px;
-    left: calc(50% - 78px);
+    left: calc(50% - 75px);
     width: 134px;
     height: 134px;
-    background: linear-gradient(135deg, rgba(46, 202, 127, 0.4) 0%, rgba(46, 202, 127, 0.01) 100%);
+    background: linear-gradient(135deg,rgba(var(--rgba-primary-dark), 1) 0%, rgba(var(--rgba-primary-ligth), 0.01) 100%);
     border-radius: 100%;
 }
 
 .profile-name{
     font-size: 32px;
-    color: #171717;
+    color: #170A1C;
     line-height: 32px;
     font-weight: 400;
     margin: 0 auto 0 auto;
 }
 
 .profile-profession{
-    font-size: 14px;
-    color: #2eca7f;
+    font-size: 18px;
+    color: rgb(var(--rgba-primary-dark));
     line-height: 14px;
     font-weight: 400;
 }
@@ -368,7 +379,7 @@ main .profile{
 
 .profile-social a:hover{
     text-decoration: none;
-    color: #2eca7f;
+    color: rgb(var(--rgba-primary));;
 }
 
 .profile-buttons{
@@ -397,13 +408,13 @@ main .profile{
     line-height: 70px;
     font-size: 12px;
     font-weight: 500;
-    color: #171717;
+    color: #170A1C;
 }
 
 
 
 .profile-buttons a:hover{
-    color: #2eca7f;
+    color: rgb(var(--rgba-primary));
 }
 
 .profile-buttons a:first-child::before, .profile-buttons a:first-child::after{
@@ -426,8 +437,6 @@ main .profile{
     position: relative;
 
 }
-
-
 
 .about-aboutMe > div > div{
     display: flex;
@@ -476,14 +485,14 @@ main .profile{
     box-sizing: border-box;
 }
 
-.about-services article .fas{
+.about-services article .fas {
     margin: 0;
     width: 60px;
     height: 60px;
     text-align: center;
     font-size: 32px;
-    color: #2eca7f;
-    background: linear-gradient(135deg, rgba(46, 202, 127, 0.4) 0%, rgba(46, 202, 127, 0.01) 100%);
+    color: rgba(var(--rgba-primary-dark), 1);
+    background: linear-gradient(135deg, rgba(var(--rgba-primary-ligth), 0.4) 0%, rgba(var(--rgba-primary-ligth), 0.01) 100%);
     border-radius: 60px;
     display: flex;
     justify-content: center;
@@ -492,7 +501,7 @@ main .profile{
 
 .about-services article h4{
     font-size: 13px;
-    color: #171717;
+    color: #170A1C;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -518,8 +527,8 @@ main .profile{
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
-    color: #171717;
-    background: rgba(46, 202, 127, 0.4);
+    color: white;
+    background: rgba(var(--rgba-primary), 1);
     font-weight: 300;
     border-radius: 2px;
 }
@@ -540,7 +549,7 @@ main .profile{
 .about-pricing > div > div > div > div{
     padding: 5px 0;
     font-size: 14px;
-    color: #171717;
+    color: #170A1C;
 }
 
 .about-pricing .amount{
@@ -555,7 +564,7 @@ main .profile{
     vertical-align: top;
     font-size: 17px;
     font-weight: 400;
-    color: #171717;
+    color: #170A1C;
 }
 
 .about-pricing .number{
@@ -566,7 +575,7 @@ main .profile{
     font-size: 42px;
     line-height: 26px;
     font-weight: 500;
-    color: #171717;
+    color: #170A1C;
 }
 
 .about-pricing .period{
@@ -574,7 +583,7 @@ main .profile{
     top: 7px;
     vertical-align: bottom;
     font-size: 13px;
-    color: #626262;
+    color: #var(--fourColor);
     position: relative;
     margin-left: 7px;
 }
@@ -585,7 +594,7 @@ main .profile{
     height: 40px;
     text-align: center;
     font-size: 32px;
-    color: #2eca7f;
+    color: rgba(1, 111, 185, 1);
 }
 
 .about-pricing a{
@@ -595,7 +604,7 @@ main .profile{
     height: 70px;
     line-height: 70px;
     font-size: 12px;
-    color: #171717;
+    color: #170A1C;
     font-weight: 500;
     text-align: center;
     text-decoration: none;
@@ -605,7 +614,7 @@ main .profile{
 }
 
 .about-pricing a:hover{
-    color: #2eca7f;
+    color: rgb(var(--rgba-primary));;
 }
 
 .about-fun{
@@ -632,7 +641,7 @@ main .profile{
     height: 43px;
     text-align: center;
     font-size: 26px;
-    color: #2eca7f;
+    color: rgb(var(--rgba-primary));
 }
 
 .about-clients{
@@ -662,7 +671,7 @@ main .profile{
     padding: 20px 18px;
     font-size: 13px;
     line-height: 13px;
-    color: #171717;
+    color: #170A1C;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -674,7 +683,7 @@ main .profile{
     width: 40px;
     height: 40px;
     font-size: 26px;
-    color: #2eca7f;
+    color: rgb(var(--rgba-primary));
 }
 
 .resume-line{
@@ -715,17 +724,17 @@ main .profile{
 }
 
 .resume-line .date.active{
-    color: #2eca7f;
+    color: rgb(var(--rgba-primary));
 }
 
 .resume-line .date.active::before{
-    background: #2eca7f;
+    background: rgb(var(--rgba-primary));
 }
 
 .resume-line .name{
     margin: 0;
     font-size: 13px;
-    color: #171717;
+    color: #170A1C;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -757,7 +766,7 @@ main .profile{
     margin: 0 0 8px 0;
     font-size: 14px;
     line-height: 14px;
-    color: #626262;
+    color: #var(--fourColor);
     text-align: left;
 }
 
@@ -768,7 +777,7 @@ main .profile{
 }
 
 .resume-skills > div section > div > div > div{
-    background: #2eca7f;
+    background: rgb(var(--rgba-primary));
     height: 4px;
 }
 
@@ -778,7 +787,7 @@ main .profile{
     padding: 20px 18px;
     font-size: 13px;
     line-height: 13px;
-    color: #171717;
+    color: #170A1C;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -790,7 +799,7 @@ main .profile{
     width: 40px;
     height: 40px;
     font-size: 26px;
-    color: #2eca7f;
+    color: rgb(var(--rgba-primary));
 }
 
 .works-header{
@@ -838,7 +847,7 @@ main .profile{
     padding: 0 0 2px 0;
     display: block;
     font-size: 13px;
-    color: #171717;
+    color: #170A1C;
     font-weight: 500;
     text-transform: uppercase;
     width: 126px;
@@ -870,7 +879,7 @@ main .profile{
     height: 50px;
     font-size: 11px;
     line-height: 11px;
-    color: #171717;
+    color: #170A1C;
     text-align: center;
     font-weight: 500;
     text-transform: uppercase;
@@ -882,7 +891,7 @@ main .profile{
     display: block;
     font-size: 20px;
     line-height: 20px;
-    color: #171717;
+    color: #170A1C;
     font-weight: 700;
 }
 
@@ -894,7 +903,7 @@ main .profile{
     padding: 0 0 2px 0;
     display: block;
     font-size: 13px;
-    color: #171717;
+    color: #170A1C;
     font-weight: 500;
     text-transform: uppercase;
     margin: 3px 0;
@@ -957,7 +966,7 @@ main .contact{
 }
 
 .contact-form button:hover {
-    color: #2eca7f;
+    color: rgb(var(--rgba-primary));
 }
 
 @media only screen and (min-width: 540px){
@@ -968,7 +977,7 @@ main .contact{
 
 @media only screen and (min-width: 1040px) {
     .selected{
-        color: #2eca7f;
+        color: rgb(var(--rgba-primary));
     }
     .page{
         position: absolute;
