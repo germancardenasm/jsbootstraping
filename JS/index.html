@@ -5,13 +5,16 @@
     <meta charset="UTF-8" />
     <meta name ="viewport" content="width = device-width, initial-scale = 1" >
     <title>German Cardenas / CV</title>
+    <!-- <script src="https://kit.fontawesome.com/38f150e778.js"></script> -->
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
-        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"  />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./favicon.ico">
+    
+
+
 </head>
 
 <body>
@@ -61,14 +64,14 @@
                     <h1 class="profile-name" id="nombre">German Cardenas</h1>
                     <h2 class="profile-profession">Web Developer</h2>
                     <div class="profile-social" id="profile-social">
-                        <a href="https://twitter.com/GermanCardena14" class="fab fa-twitter"></a>
-                        <a href="https://github.com/germancardenasm" class="fab fa-github"></a>
-                        <a href="https://stackoverflow.com/users/10274636/german-cardenas" class="fab fa-stack-overflow"></a>
+                        <a href="https://twitter.com/GermanCardena14" class="fab fa-twitter" target='_blank'></a>
+                        <a href="https://github.com/germancardenasm" class="fab fa-github" target='_blank'></a>
+                        <a href="https://stackoverflow.com/users/10274636/german-cardenas" class="fab fa-stack-overflow" target='_blank'></a>
                     </div>
                 </div>
                 <div class="profile-buttons">
                     <a href="/myCV.txt" download>DOWNLOAD CV <i class="fas fa-download"></i></a>
-                    <a href="#contact">CONTACT ME <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" id='contact_me'>CONTACT ME <i class="fas fa-arrow-right"></i></a>
                 </div>
             </section>
             <div id="about" class="about view">
@@ -76,23 +79,23 @@
                     <h3 class="title">About Me</h3>
                     <div class="line-left">
                         <p>Hello, my name is German Cardenas. I am a self-taught developer primarilly 
-                          focused on front-end development with JavaSript (ES5, ES6), React, HTML5, CSS3, SCSS, GIT and others. <br>
+                          focused on front-end development using React, JavaSript, HTML5, CSS3, SCSS, GIT and others. <br>
                           I have also developed back-end apps with NODE.JS and MySql Database. <br>
                           I am a proactive person, with a fast learning skill, adaptation and work 
                           efficiently as part of a team or on my own.<br>
                         </p>
                         <div>
-                            <div>
-                                <span>AGE . . . . </span>37
+                            <div class='personal-info'>
+                                <span>AGE . . . </span>37
                             </div>
                             <div>
-                                <span>RESIDENCE . . . . </span>COLOMBIA
+                                <span>RESIDENCE . . . </span>COLOMBIA
                             </div>
                             <div>
-                                <span>FREELANCE . . . . </span>Available
+                                <span>FREELANCE . . . </span>Available
                             </div>
                             <div>
-                                <span>ADDRESS . . . . </span>Medellín, COLOMBIA
+                                <span>ADDRESS . . . </span>Medellín
                             </div>
                         </div>
                     </div>
@@ -163,7 +166,7 @@
                         </div>
                         <!-- TODO ¿Por que no aparece la imagen=? -->
                         <div class="line-left">
-                            <div class="fas fa-cookie-bite"></div>
+                            <div class="fas fa-ice-cream"></div>
                             <div>FOOD</div>
                         </div>
                         <div class="line-left">           
@@ -253,7 +256,7 @@
                     </section>
                 </div>
                 <section class="resume-skills">
-                    <h3 class="title">Some Skills</h3>
+                    <h3 class="title">Skills</h3>
                     <div>
                         
                         <section class="line-left">
@@ -332,55 +335,68 @@
                     <h3 class="title">Recent Works</h3>
                     <ul>
                         <li>All</li>
+                        <li>Web</li>
                         <li>Photo</li>
-                        <li>Video</li>
-                        <li>Music</li>
-                        <li>Design</li>
                     </ul>
                 </div>
+                
                 <div class="works-content">
                     <div class="line-left">
-                        <div class="line-down">
-                            <img src="./img/work1.jpg" alt="MOTORCYCLE HELMET">
-                            <h4>MOTORCYCLE HELMET</h4>
-                            <h5>PHOTO</h5>
+                       
+                          <div class="line-down work-container">
+                            <a href='https://recordingacademy-420df.web.app/' target='_blank'>
+                             <img src="./img/reactApp.png" alt="Recording Academy thumbnail">
+                              <h4>RECORDING ACADEMY</h4>
+                              <h5>Web</h5>
+                              <div class = 'technologies'>
+                                  <i class="fab fa-react"></i>
+                                  <i class="fab fa-js-square"></i>
+                                  <i class="fab fa-html5"></i>
+                                  <i class="fab fa-sass"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </a>
+                        <div class="line-down work-container">
+                            <a href='https://restaurant-reservation-d8054.web.app/' target='_blank'>
+                              <img src="./img/reservationsApp.png" alt="Restaurant App thumbnail">
+                               <h4>RESERVATIONS APP</h4>
+                               <h5>Web</h5>
+                               <div class = 'technologies'>
+                                   <i class="fab fa-js-square"></i>
+                                   <i class="fab fa-css3-alt"></i>
+                                   <i class="fab fa-html5"></i>
+                               </div>
+                             </a>
                         </div>
-                        <div class="line-down">
-                            <img src="./img/work4.jpg" alt="MOBILE APPLICATION">
-                            <h4>MOBILE APPLICATION</h4>
-                            <h5>DESIGN</h5>
-                        </div>
-                        <div class="line-down">
-                            <img src="./img/work8.jpg" alt="DAYLIGHT ENTRANCE">
-                            <h4>DAYLIGHT ENTRANCE</h4>
-                            <h5>MUSIC</h5>
-                        </div>
-                        <div class="line-down">
-                            <img src="./img/work7.jpg" alt="SOCIAL WEBSITE">
-                            <h4>SOCIAL WEBSITE</h4>
-                            <h5>DESIGN</h5>
-                        </div>
+                        
                     </div>
                     <div class="line-left">
-                        <div class="line-down">
-                            <img src="./img/work2.jpg" alt="MINIMALISM SHAPES">
-                            <h4>MINIMALISM SHAPES</h4>
-                            <h5>VIDEO</h5>
+                        <div class="line-down work-container">
+                            <a href='https://poll-app-5c354.web.app/' target='_blank'>
+                              <img src="./img/pollApp.png" alt="Poll App thumbnail">
+                               <h4>POLL APP</h4>
+                               <h5>Web</h5>
+                               <div class = 'technologies'>
+                                   <i class="fab fa-js-square"></i>
+                                   <i class="fab fa-html5"></i>
+                                   <i class="fab fa-css3-alt"></i>
+                                   <span class='logo'><img src="./img/mocha.png" alt="Poll App thumbnail"></span>
+
+                               </div>
+                             </a>
                         </div>
-                        <div class="line-down">
-                            <img src="./img/work3.jpg" alt="STAIRCASE">
-                            <h4>STAIRCASE</h4>
-                            <h5>MUSIC</h5>
-                        </div>
-                        <div class="line-down">
-                            <img src="./img/work5.jpg" alt="GEREAL TRAVELS">
-                            <h4>GEREAL TRAVELS</h4>
-                            <h5>PHOTO</h5>
-                        </div>
-                        <div class="line-down">
-                            <img src="./img/work6.jpg" alt="ARCHITECTURE">
-                            <h4>ARCHITECTURE</h4>
-                            <h5>VIDEO</h5>
+                        <div class="line-down work-container">
+                            <a href='https://map-app-502ad.web.app/' target='_blank'>
+                              <img src="./img/mapApp.png" alt="Map thumbnail">
+                               <h4>API Consumption</h4>
+                               <h5>Web</h5>
+                               <div class = 'technologies'>
+                                   <i class="fab fa-js-square"></i>
+                                   <i class="fab fa-html5"></i>
+                                   <i class="fab fa-css3-alt"></i>
+                               </div>
+                             </a>
                         </div>
                     </div>
 
@@ -389,24 +405,13 @@
             <section id="blog" class="blog">
                 <h3 class="title">Lastest Posts</h3>
                 <div class="blog-items line-left">
-                    <article class="line-down">
+                    <article class="line-down work-container">
                         <img src="./img/blog1.jpg" alt="BY SPITE ABOUT DO OF DO ALLOW BLUSH">
                         <div><span>20</span> JUN</div>
                         <h4>BY SPITE ABOUT DO OF DO ALLOW BLUSH</h4>
                         <h5>DESIGN</h5>
                     </article>
-                    <article class="line-down">
-                        <img src="./img/blog2.jpg" alt="TWO BEFORE ARROW NOT RELIED">
-                        <div><span>19</span> JUN</div>
-                        <h4>TWO BEFORE ARROW NOT RELIED</h4>
-                        <h5>CODING</h5>
-                    </article>
-                    <article class="line-down">
-                        <img src="./img/blog3.jpg" alt="BY SPITE ABOUT DO OF DO ALLOW BLUSH">
-                        <div><span>18</span> JUN</div>
-                        <h4>BY SPITE ABOUT DO OF DO ALLOW BLUSH</h4>
-                        <h5>TRAVEL</h5>
-                    </article>
+           
                 </div>
             </section>
             <div id="contact" class="contact">
@@ -414,22 +419,22 @@
                     <h3 class="title">Get in Touch</h3>
                     <div class="contact-information line-left">
                         <div>
-                            <span>ADDRESS . . . . </span> California, USA
+                            <span>ADDRESS . . . </span> Medellin, COL
                         </div>
                         <div>
-                            <span>EMAIL . . . . </span> adlard@example.com
+                            <span>EMAIL . . </span> german@gmail.com
                         </div>
                         <div>
-                            <span>PHONE . . . . </span> +123 654 78900
+                            <span>PHONE . . . </span> +57 318 5850000
                         </div>
                         <div>
-                            <span>FREELANCE . . . . </span> Available
+                            <span>FREELANCE . . . </span> Available
                         </div>
                     </div>
                 </section>
                 <section class="contact-form">
                     <h3 class="title">Contact Form</h3>
-                    <form class="line-left" id="form" action="mailto:someone@example.com" method="post">
+                    <form class="line-left" id="form" action="mailto:germancardenas@gmail.com" method="post">
                         <div class="double-line">
                             <div>
                                 <input type="text" placeholder="Full Name" id="name" name="name" required>
@@ -442,7 +447,7 @@
                             <textarea name="message" placeholder="Your Message" id="message" cols="30" rows="10"
                                 required></textarea>
                         </div>
-                        <button>SEND MESSAGE <i class="fas fa-arrow-right"></i></button>
+                        <button id="send" type='submit' form='form' value='submit'>SEND MESSAGE <i class="fas fa-arrow-right"></i></button>
                     </form>
                 </section>
             </div>

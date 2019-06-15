@@ -6,18 +6,17 @@
   --rgba-secondary:  0, 10,193;	/* Main Secondary color*/
   --rgba-secondary-ligth: 33, 44,252;
   --rgba-secondary-dark:  0,  6,119;
-
-  --rgba-third: 0,194,100;	/* Main third color */
-  --rgba-third-ligth:  0,252,131;
-  --rgba-third-dark:  0,119, 62;
 }
-
+*{
+  box-sizing: border-box;
+}
 body{
     padding: 0;
     margin: 0;
+    min-width: 350px;;
     border: none;
     font-family: 'Poppins';
-    font-size: 14px;
+    font-size: 12px;
     color: rgb(var(--fourColor));
     letter-spacing: 0em;
     font-weight: 400;
@@ -30,7 +29,7 @@ a{
 }
 
 .background.gradient {
-    background: linear-gradient(to bottom right, rgba(var(--rgba-primary-ligth), 0.7) 0%, rgba(var(--rgba-primary-ligth), 0.1) 100%);
+    background: linear-gradient(to bottom right, #CED3DC 0%, #5B616A 100%);
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -41,6 +40,7 @@ a{
 
 .bg-bubbles {
     position: absolute;
+    padding: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -300,8 +300,12 @@ main .profile{
     overflow: hidden;
 }
 
+main .profile .personal-info{
+  background: red;
+} 
+
 .profile-background{
-    background-image: url("./img/bgLandscape.jpg");
+    background-image: url("./img/bg-code.jpg");
     height: 300px;
     background-size: cover;
     background-position: center center;
@@ -343,9 +347,10 @@ main .profile{
     border-radius: 50%;
     border: 3px solid white;
     width: 134px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
-.profile-image::before{
+/* .profile-image::before{
     content: '';
     position: absolute;
     top: -69px;
@@ -354,7 +359,7 @@ main .profile{
     height: 134px;
     background: linear-gradient(135deg,rgba(var(--rgba-primary-dark), 1) 0%, rgba(var(--rgba-primary-ligth), 0.01) 100%);
     border-radius: 100%;
-}
+} */
 
 .profile-name{
     font-size: 32px;
@@ -365,7 +370,7 @@ main .profile{
 }
 
 .profile-profession{
-    font-size: 18px;
+    font-size: 18git px;
     color: rgb(var(--rgba-primary-dark));
     line-height: 14px;
     font-weight: 400;
@@ -445,12 +450,13 @@ main .profile{
 
 .about-aboutMe > div > div > div{
     width: 50%;
+    margin-top: 15px;
     text-align: left;
 }
 
 .about-aboutMe > div > div > div span{
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 
@@ -507,7 +513,7 @@ main .profile{
 }
 
 .about-services article p{
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.6;
     padding: 0;
 }
@@ -544,11 +550,12 @@ main .profile{
 
 .about-pricing > div > div > div{ 
     padding: 25px 0px;
+    min-height: 180px;
 }
 
 .about-pricing > div > div > div > div{
     padding: 5px 0;
-    font-size: 14px;
+    font-size: 13px;
     color: #170A1C;
 }
 
@@ -583,7 +590,7 @@ main .profile{
     top: 7px;
     vertical-align: bottom;
     font-size: 13px;
-    color: #var(--fourColor);
+    color: var(--fourColor);
     position: relative;
     margin-left: 7px;
 }
@@ -623,6 +630,7 @@ main .profile{
 
 .about-fun > div{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -632,7 +640,7 @@ main .profile{
     justify-content: center;
     height: 148px;
     width: 25%;
-    padding: 0 16px;
+    min-width: 100px;
 }
 
 .about-fun .fas{
@@ -766,7 +774,7 @@ main .profile{
     margin: 0 0 8px 0;
     font-size: 14px;
     line-height: 14px;
-    color: #var(--fourColor);
+    color: var(--fourColor);
     text-align: left;
 }
 
@@ -806,10 +814,12 @@ main .profile{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .works-header ul{
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     padding-bottom: 17px;
@@ -841,6 +851,20 @@ main .profile{
 
 .works-content > div > div{
     padding:18px;
+
+}
+.works-content .line-left .work-container{
+  min-height:350px;
+
+}
+.works-content > div > div .technologies{
+  font-size: 24px;
+  color: rgb(var(--rgba-secondary-dark));
+}
+
+.works-content > div > div .logo{
+  width: 30px;
+  display: inline-block;
 }
 
 .works-content > div > div h4{
@@ -861,6 +885,8 @@ main .profile{
     font-weight: 300;
     text-transform: uppercase;
 }
+
+
 
 .works-content img{
     width: 100%;
@@ -923,18 +949,21 @@ main .contact{
 
 .contact-information{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 11px 18px;
 }
 
 .contact-information > div{
-    width: 50%;
+    width: 100%;
     text-align: left;
+    margin-bottom: 15px;
 }
 
 .contact-information > div span{
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
+
 }
 .contact-form{
     margin-top: 50px;
