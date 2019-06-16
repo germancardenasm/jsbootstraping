@@ -12,14 +12,10 @@ let getContact = document.getElementById("getContact");
 let send = document.getElementById("send");
 let email = document.getElementById("email");
 let form = document.getElementById("form");
-
-
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
+let modalImg = document.getElementById("modalImg");
+let modalTitle = document.getElementById("modalTitle");
+let modalAnchor = document.getElementById("modalAnchor");
 var span = document.getElementsByClassName("close")[0];
 
 function removeSection() {
@@ -58,7 +54,6 @@ function getSection(event, section, getButton) {
   }
 }
 
-
 worksCategories.addEventListener('click', function(e){
 
   let worksContainers = document.getElementsByClassName('work-container');
@@ -83,9 +78,16 @@ worksCategories.addEventListener('click', function(e){
  
 })
 
-worksContent.addEventListener('click', function(e){
-  modal.style.display = "block";
+worksContent.addEventListener('click', function(event){
+  var parent = getClosest(event.target, '.work-container');
+  if(parent)
+  {
+    modalImg.src = parent.getElementsByTagName('img')[0].src;
+    modalTitle.innerHTML = parent.getElementsByTagName('h4')[0].innerText
+    modalAnchor.href =  parent.getAttribute('href');
+    modal.style.display = "block";
 
+  }
 });
 
 email.addEventListener("input", function(event) {
@@ -114,20 +116,21 @@ form.addEventListener("submit", function(event) {
 });
 
 
-
-// When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
+
+function getClosest(elem, selector) {
+
+	for ( ; elem && elem !== document; elem = elem.parentNode ) {
+    if ( elem.matches( selector ) ) 
+      return elem;
+	}
+	return null;
+};

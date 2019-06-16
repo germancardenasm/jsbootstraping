@@ -1,0 +1,62 @@
+
+<div class="works-content" id="works-content">
+  <div class="line-left">
+     
+        <div class="line-down work-container react" >
+          <a href='https://recordingacademy-420df.web.app/' target='_blank'>
+           <img src="./img/reactApp.png" alt="Recording Academy thumbnail">
+            <h4>RECORDING ACADEMY</h4>
+            <h5>Web</h5>
+            <div class = 'technologies'>
+                <i class="fab fa-react"></i>
+                <i class="fab fa-js-square"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-sass"></i>
+            </div>
+          </a>
+        </div>
+      </a>
+      <div class="line-down work-container js">
+          <!-- <a href='https://restaurant-reservation-d8054.web.app/' target='_blank'> -->
+            <img src="./img/reservationsApp.png" alt="Restaurant App thumbnail">
+             <h4>RESERVATIONS APP</h4>
+             <h5>Web</h5>
+             <div class = 'technologies'>
+                 <i class="fab fa-js-square"></i>
+                 <i class="fab fa-css3-alt"></i>
+                 <i class="fab fa-html5"></i>
+             </div>
+           <!-- </a> -->
+      </div>
+      
+  </div>
+  <div class="line-left">
+      <div class="line-down work-container js">
+          <!-- <a href='https://poll-app-5c354.web.app/' target='_blank'> -->
+            <img src="./img/pollApp.png" alt="Poll App thumbnail">
+             <h4>POLL APP</h4>
+             <h5>Web</h5>
+             <div class = 'technologies'>
+                 <i class="fab fa-js-square"></i>
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-css3-alt"></i>
+                  <span class='logo'><img src="./img/mocha.png" alt="Poll App thumbnail"></span>
+
+             </div>
+         <!--   </a> -->
+      </div>
+      <div class="line-down work-container api">
+          <!-- <a href='https://map-app-502ad.web.app/' target='_blank'> -->
+            <img src="./img/mapApp.png" alt="Map thumbnail">
+             <h4>API Consumption</h4>
+             <h5>Web</h5>
+             <div class = 'technologies'>
+                 <i class="fab fa-js-square"></i>
+                 <i class="fab fa-html5"></i>
+                 <i class="fab fa-css3-alt"></i>
+             </div>
+           <!-- </a> -->
+      </div>
+  </div>
+
+</div>
