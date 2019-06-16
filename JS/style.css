@@ -1,15 +1,17 @@
 :root{
-  --rgba-primary: 0,110,182;	/* Main Primary color */
+  --rgba-primary: 0,110,182;	/* Primary color */
   --rgba-primary-ligth: 14,158,251;
   --rgba-primary-dark:  0, 67,110;
   
-  --rgba-secondary:  0, 10,193;	/* Main Secondary color*/
+  --rgba-secondary:  0, 10,193;	/* Secondary color*/
   --rgba-secondary-ligth: 33, 44,252;
   --rgba-secondary-dark:  0,  6,119;
 }
+
 *{
   box-sizing: border-box;
 }
+
 body{
     padding: 0;
     margin: 0;
@@ -823,6 +825,7 @@ main .profile .personal-info{
     list-style: none;
     padding: 0;
     padding-bottom: 17px;
+
 }
 
 .works-header h3::after{
@@ -836,8 +839,13 @@ main .profile .personal-info{
 }
 
 .works-header ul li{
-    margin: 0 5px;
+    padding: 0 5px;
     cursor: pointer;
+}
+
+.works-header ul li.selected{
+  color: rgb(var(--rgba-primary));
+  font-weight: 500;
 }
 
 .works-content{
@@ -857,6 +865,11 @@ main .profile .personal-info{
   min-height:350px;
 
 }
+
+.works-content .line-left .work-container.hidden{
+  display: none;
+}
+
 .works-content > div > div .technologies{
   font-size: 24px;
   color: rgb(var(--rgba-secondary-dark));
@@ -881,12 +894,10 @@ main .profile .personal-info{
 .works-content > div > div h5{
     margin: 0;
     font-size: 11px;
-    color: #999999;
+    color: #888888;
     font-weight: 300;
     text-transform: uppercase;
 }
-
-
 
 .works-content img{
     width: 100%;
@@ -1005,7 +1016,7 @@ main .contact{
 }
 
 @media only screen and (min-width: 1040px) {
-    .selected{
+  header nav a.selected{
         color: rgb(var(--rgba-primary));
     }
     .page{
@@ -1088,6 +1099,45 @@ main .contact{
       main .contact {
         margin-bottom: 0;
     }
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 
