@@ -59,6 +59,7 @@ worksCategories.addEventListener('click', function(e){
   let worksContainers = document.getElementsByClassName('work-container');
   
   for(let i = 0; i < worksContainers.length; i++) { 
+    
 
     if(worksCategories.children[i].innerHTML.toLowerCase() == e.target.innerHTML.toLowerCase())
       worksCategories.children[i].classList.add('selected');
@@ -79,12 +80,13 @@ worksCategories.addEventListener('click', function(e){
 })
 
 worksContent.addEventListener('click', function(event){
-  var parent = getClosest(event.target, '.work-container');
+  var parent = getClosestParent(event.target, '.work-container');
   if(parent)
   {
     modalImg.src = parent.getElementsByTagName('img')[0].src;
     modalTitle.innerHTML = parent.getElementsByTagName('h4')[0].innerText
     modalAnchor.href =  parent.getAttribute('href');
+    modal.style.top = works.scrollTop+'px';
     modal.style.display = "block";
 
   }
@@ -126,8 +128,7 @@ window.onclick = function(event) {
   }
 }
 
-function getClosest(elem, selector) {
-
+function getClosestParent(elem, selector) {
 	for ( ; elem && elem !== document; elem = elem.parentNode ) {
     if ( elem.matches( selector ) ) 
       return elem;
